@@ -13,12 +13,13 @@ def listar_tareas():
         print(f"{i}. {estado} {t['titulo']}")
 
 def mostrar_menu():
-    print("\n--- GESTOR DE TAREAS ---")
-    print("1. Agregar tarea")
-    print("2. Listar tareas")
-    print("3. Completar tarea")
-    print("4. Eliminar tarea")
-    print("5. Salir")
+    print("\n=== GESTOR DE TAREAS CLI (AYUDA) ===")
+    print("Seleccione una opción del 1 al 5:")
+    print("1. Agregar una nueva tarea")
+    print("2. Listar todas las tareas")
+    print("3. Marcar tarea como completada")
+    print("4. Eliminar una tarea existente")
+    print("5. Salir del programa")
 
 if __name__ == "__main__":
     mostrar_menu()
