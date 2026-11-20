@@ -12,6 +12,20 @@ def listar_tareas():
         estado = "[X]" if t["completada"] else "[ ]"
         print(f"{i}. {estado} {t['titulo']}")
 
+def completar_tarea(indice):
+    if 0 <= indice < len(tareas):
+        tareas[indice]["completada"] = True
+        print("Tarea marcada como completada.")
+    else:
+        print("Índice no válido.")
+
+def eliminar_tarea(indice):
+    if 0 <= indice < len(tareas):
+        eliminada = tareas.pop(indice)
+        print(f"Tarea '{eliminada['titulo']}' eliminada.")
+    else:
+        print("Índice no válido.")
+
 def mostrar_menu():
     print("\n=== GESTOR DE TAREAS CLI (AYUDA) ===")
     print("Seleccione una opción del 1 al 5:")
